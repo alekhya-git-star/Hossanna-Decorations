@@ -16,29 +16,29 @@ h2 {
 header {
     text-align: left;
 }
+
 .separator {
     width: 60px;
     height: 4px;
-    background: linear-gradient(to right, #371ade, #ff0080);
+    background: linear-gradient(to right, #ffcd00, #ff0080);
     margin: 40px auto;
     border-radius: 2px;
 }
 
-/* Title Section with background image */
+/* Title Section */
 .title-section {
     position: relative;
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYxKhgGSJLpZy7TqZofugZqwGTNPRye1petw&s'); 
-    background-repeat: no-repeat;       
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYxKhgGSJLpZy7TqZofugZqwGTNPRye1petw&s');
+    background-repeat: no-repeat;
     background-size: 40% auto;
-    background-position: right center;  
-    height: 300px;                       
-    display: flex;                       
-    flex-direction: column;              
-    justify-content: center;             
-    padding-left: 50px;                  
+    background-position: right center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
 }
 
-/* Overlay for text readability */
 .title-section::before {
     content: "";
     position: absolute;
@@ -47,7 +47,6 @@ header {
     z-index: 1;
 }
 
-/* Title text */
 .title-section h1 {
     position: relative;
     z-index: 2;
@@ -60,7 +59,6 @@ header {
     text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
 
-/* Subtitle */
 .title-section p {
     position: relative;
     z-index: 2;
@@ -80,10 +78,11 @@ nav ul {
     list-style: none;
     text-align: center;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 20px;
 }
 
@@ -98,28 +97,16 @@ nav ul li a:hover {
     color: #ffcc80;
 }
 
-/* -------------------- About Us -------------------- */
+/* -------------------- About -------------------- */
 .about {
     text-align: center;
-    padding: 40px 20px;
+    padding: 60px 20px;
     max-width: 900px;
     margin: 0 auto;
     line-height: 1.6;
-}
-.about {
     background: rgba(255,255,255,0.05) url('https://www.transparenttextures.com/patterns/arabesque.png') repeat;
-    padding: 60px 20px;
     border-radius: 20px;
 }
-.separator {
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(to right, #ffcd00, #ff0080);
-    margin: 40px auto;
-    border-radius: 2px;
-}
-
-
 
 /* -------------------- Services -------------------- */
 .services {
@@ -136,8 +123,10 @@ nav ul li a:hover {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
-    transition: transform 0.3s, box-shadow
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: popUp 0.8s ease forwards;
 }
+
 .service-box:hover {
     transform: scale(1.05) translateY(-10px);
     box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
@@ -147,14 +136,6 @@ nav ul li a:hover {
     width: 50%;
     border-radius: 15px;
 }
-.separator {
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(to right, #ffcd00, #ff0080);
-    margin: 40px auto;
-    border-radius: 2px;
-}
-
 
 /* -------------------- Gallery -------------------- */
 .gallery {
@@ -175,6 +156,7 @@ nav ul li a:hover {
     object-fit: cover;
     border-radius: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
+    animation: popUp 0.8s ease forwards;
 }
 
 .gallery-images img:hover {
@@ -182,7 +164,7 @@ nav ul li a:hover {
     box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
 }
 
-/* -------------------- Video Section -------------------- */
+/* -------------------- Video -------------------- */
 .video-section {
     text-align: center;
     padding: 40px 20px;
@@ -209,6 +191,7 @@ nav ul li a:hover {
     border-radius: 15px;
     font-style: italic;
     box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    animation: popUp 0.8s ease forwards;
 }
 
 /* -------------------- Pricing -------------------- */
@@ -228,7 +211,7 @@ nav ul li a:hover {
     box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
 }
 
-/* -------------------- Contact Section -------------------- */
+/* -------------------- Contact -------------------- */
 .contact {
     text-align: center;
     background-color: #880e4f;
@@ -277,120 +260,16 @@ footer {
     background-color: #4a0033;
 }
 
-/* -------------------- Responsive -------------------- */
-@media screen and (max-width: 768px) {
-    .title-section {
-        height: 220px;
-        padding-left: 20px;
-    }
-
-    .title-section h1 {
-        font-size: 50px;
-    }
-
-    .service-box, .pricing-box {
-        width: 150px;
-    }
-
-    .gallery-images img {
-        width: 150px;
-        height: 100px;
-    }
+/* -------------------- Animations -------------------- */
+@keyframes popUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-@media screen and (max-width: 480px) {
-    .title-section h1 {
-        font-size: 36px;
-    }
-
-    .title-section p {
-        font-size: 16px;
-    }
-
-    .service-box, .pricing-box {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .gallery-images {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-/* -------------------- Your Styles -------------------- */
-
-/* Global, header, nav, services, gallery, etc. styles here */
-
-/* Services animations */
-.service-box {
-    animation: fadeInUp 1s ease forwards;
-}
-.service-box {
-    animation: popUp 0.8s ease forwards;
-}
-
-/* Stagger them for a flow effect */
 .service-box:nth-child(1) { animation-delay: 0s; }
 .service-box:nth-child(2) { animation-delay: 0.2s; }
 .service-box:nth-child(3) { animation-delay: 0.4s; }
 .service-box:nth-child(4) { animation-delay: 0.6s; }
-
-
-/* Gallery animations */
-.gallery-images img {
-    animation: fadeInUp 1s ease forwards;
-}
-.gallery-images img {
-    animation: popUp 0.8s ease forwards;
-}
 
 .gallery-images img:nth-child(1) { animation-delay: 0s; }
-.gallery-images img:nth-child(2) { animation-delay: 0.2s; }
-.gallery-images img:nth-child(3) { animation-delay: 0.4s; }
-
-
-/* Testimonials animations */
-.testimonial-box {
-    animation: fadeInUp 1s ease forwards;
-}
-.testimonial-box {
-    animation: popUp 0.8s ease forwards;
-    animation-delay: 0.2s; /* adjust as needed */
-}
-
-
-/* -------------------- Keyframes -------------------- */
-/* -------------------- Your Styles -------------------- */
-
-/* Global, header, nav, services, gallery, etc. styles here */
-
-/* Services animations */
-.service-box {
-    animation: fadeInUp 1s ease forwards;
-}
-
-/* Gallery animations */
-.gallery-images img {
-    animation: fadeInUp 1s ease forwards;
-}
-
-/* Testimonials animations */
-.testimonial-box {
-    animation: fadeInUp 1s ease forwards;
-}
-
-/* -------------------- Keyframes -------------------- */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.service-box:nth-child(1) { animation-delay: 0s; }
-.service-box:nth-child(2) { animation-delay: 0.2s; }
-.service-box:nth-child(3) { animation-delay: 0.4s; }
-.service-box:nth-child(4) { animation-delay: 0.6s; }
+.gallery-images img:nth-child(2) { animation-delay: 0.2s;
