@@ -43,7 +43,7 @@ header {
     content: "";
     position: absolute;
     top:0; left:0; right:0; bottom:0;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.2);
     z-index: 1;
 }
 
@@ -53,11 +53,19 @@ header {
     font-size: 70px;
     font-weight: bold;
     margin: 0;
-    background: linear-gradient(to right,rgb(3, 117, 52));
+    background: linear-gradient(135deg, #ff0080, #ffcd00, #03a234, #00f0ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
+@media screen and (max-width: 768px) {
+    .title-section h1 { font-size: 50px; }
+}
+
+@media screen and (max-width: 480px) {
+    .title-section h1 { font-size: 36px; }
+}
+
 
 .title-section p {
     position: relative;
@@ -289,5 +297,6 @@ footer {
     .service-box, .pricing-box { width: 100%; margin: 10px 0; }
     .gallery-images { flex-direction: column; align-items: center; }
 }
+
 
 
