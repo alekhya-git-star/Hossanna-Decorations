@@ -1,0 +1,396 @@
+/* -------------------- Global Styles -------------------- */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #f76ab1, #c858ea);
+    color: white;
+}
+
+h2 {
+    color: #880e4f;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* -------------------- Header & Title -------------------- */
+header {
+    text-align: left;
+}
+.separator {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, #371ade, #ff0080);
+    margin: 40px auto;
+    border-radius: 2px;
+}
+
+/* Title Section with background image */
+.title-section {
+    position: relative;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYxKhgGSJLpZy7TqZofugZqwGTNPRye1petw&s'); 
+    background-repeat: no-repeat;       
+    background-size: 40% auto;
+    background-position: right center;  
+    height: 300px;                       
+    display: flex;                       
+    flex-direction: column;              
+    justify-content: center;             
+    padding-left: 50px;                  
+}
+
+/* Overlay for text readability */
+.title-section::before {
+    content: "";
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+/* Title text */
+.title-section h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 70px;
+    font-weight: bold;
+    margin: 0;
+    background: linear-gradient(to right,rgb(3, 117, 52));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Subtitle */
+.title-section p {
+    position: relative;
+    z-index: 2;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ffe6f0;
+    font-style: italic;
+}
+
+/* -------------------- Navigation -------------------- */
+nav {
+    background-color: #880e4f;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc80;
+}
+
+/* -------------------- About Us -------------------- */
+.about {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+.about {
+    background: rgba(255,255,255,0.05) url('https://www.transparenttextures.com/patterns/arabesque.png') repeat;
+    padding: 60px 20px;
+    border-radius: 20px;
+}
+.separator {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, #ffcd00, #ff0080);
+    margin: 40px auto;
+    border-radius: 2px;
+}
+
+
+
+/* -------------------- Services -------------------- */
+.services {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.service-box {
+    background-color: white;
+    color: black;
+    display: inline-block;
+    width: 200px;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow
+}
+.service-box:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+}
+
+.service-box img {
+    width: 50%;
+    border-radius: 15px;
+}
+.separator {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, #ffcd00, #ff0080);
+    margin: 40px auto;
+    border-radius: 2px;
+}
+
+
+/* -------------------- Gallery -------------------- */
+.gallery {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gallery-images img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+}
+
+/* -------------------- Video Section -------------------- */
+.video-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.video-section iframe {
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+    max-width: 100%;
+}
+
+/* -------------------- Testimonials -------------------- */
+.testimonials {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.testimonial-box {
+    background: rgba(255,255,255,0.9);
+    color: black;
+    max-width: 600px;
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 15px;
+    font-style: italic;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+/* -------------------- Pricing -------------------- */
+.pricing {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.pricing-box {
+    background: rgba(255,255,255,0.9);
+    color: black;
+    display: inline-block;
+    width: 200px;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+/* -------------------- Contact Section -------------------- */
+.contact {
+    text-align: center;
+    background-color: #880e4f;
+    color: white;
+    padding: 40px 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 20px auto 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff0080;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #ffcd00;
+    color: black;
+}
+
+/* -------------------- Footer -------------------- */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #4a0033;
+}
+
+/* -------------------- Responsive -------------------- */
+@media screen and (max-width: 768px) {
+    .title-section {
+        height: 220px;
+        padding-left: 20px;
+    }
+
+    .title-section h1 {
+        font-size: 50px;
+    }
+
+    .service-box, .pricing-box {
+        width: 150px;
+    }
+
+    .gallery-images img {
+        width: 150px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title-section h1 {
+        font-size: 36px;
+    }
+
+    .title-section p {
+        font-size: 16px;
+    }
+
+    .service-box, .pricing-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .gallery-images {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* -------------------- Your Styles -------------------- */
+
+/* Global, header, nav, services, gallery, etc. styles here */
+
+/* Services animations */
+.service-box {
+    animation: fadeInUp 1s ease forwards;
+}
+.service-box {
+    animation: popUp 0.8s ease forwards;
+}
+
+/* Stagger them for a flow effect */
+.service-box:nth-child(1) { animation-delay: 0s; }
+.service-box:nth-child(2) { animation-delay: 0.2s; }
+.service-box:nth-child(3) { animation-delay: 0.4s; }
+.service-box:nth-child(4) { animation-delay: 0.6s; }
+
+
+/* Gallery animations */
+.gallery-images img {
+    animation: fadeInUp 1s ease forwards;
+}
+.gallery-images img {
+    animation: popUp 0.8s ease forwards;
+}
+
+.gallery-images img:nth-child(1) { animation-delay: 0s; }
+.gallery-images img:nth-child(2) { animation-delay: 0.2s; }
+.gallery-images img:nth-child(3) { animation-delay: 0.4s; }
+
+
+/* Testimonials animations */
+.testimonial-box {
+    animation: fadeInUp 1s ease forwards;
+}
+.testimonial-box {
+    animation: popUp 0.8s ease forwards;
+    animation-delay: 0.2s; /* adjust as needed */
+}
+
+
+/* -------------------- Keyframes -------------------- */
+/* -------------------- Your Styles -------------------- */
+
+/* Global, header, nav, services, gallery, etc. styles here */
+
+/* Services animations */
+.service-box {
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Gallery animations */
+.gallery-images img {
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Testimonials animations */
+.testimonial-box {
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* -------------------- Keyframes -------------------- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.service-box:nth-child(1) { animation-delay: 0s; }
+.service-box:nth-child(2) { animation-delay: 0.2s; }
+.service-box:nth-child(3) { animation-delay: 0.4s; }
+.service-box:nth-child(4) { animation-delay: 0.6s; }
